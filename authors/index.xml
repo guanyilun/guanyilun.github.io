@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | Yilun Guan</title>
+    <link>/authors/</link>
+      <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Authors</title>
+      <link>/authors/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>/authors/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/authors/admin/</guid>
+      <description>&lt;p&gt;I am a physics PhD student at the University of Pittsburgh. My research interests lie in both
+theoretical and observational cosmology. In particular, I am interested in contraining
+cosmological models through their imprints on the cosmic microwave
+background (CMB). One project that I am currently working on is to understand the
+impacts of primordial magnetic field on the CMB anisotropies. Specifically, how
+does primordial magnetic field affect the B-mode signal.&lt;/p&gt;
+
+&lt;p&gt;I am also interested in CMB data analysis. As a member of two collaborations:
+ACT (Atacama Cosmology Telescope) and SO (Simons Observatory), I am working on
+detector calibrations algorithms and data selection algorithms.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
