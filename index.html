@@ -20,6 +20,7 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <link rel="alternate" type="application/rss+xml" href="https://guanyilun.github.io/index.xml">
+<link rel="alternate" type="application/json" href="https://guanyilun.github.io/index.json">
 <noscript>
     <style>
         #theme-toggle,
@@ -53,16 +54,16 @@
   "description": "",
   "thumbnailUrl": "https://guanyilun.github.io/favicon.ico",
   "sameAs": [
-      "https://github.com/guanyilun", "https://twitter.com/yilun_guan"
+      "https://github.com/guanyilun", "https://twitter.com/yilun_guan", "mailto:yilun.guan@utoronto.ca"
   ]
 }
 </script>
 </head>
 
-<body class="list dark" id="top">
+<body class="list" id="top">
 <script>
-    if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
     }
 
 </script>
@@ -114,7 +115,7 @@
         <h1>👋 Welcome to Yilun&rsquo;s Personal Website!</h1>
     </header>
     <div class="entry-content">
-        Hi there! My name is Yilun Guan, a Cosmologist working at the Dunlap Institute of Astrophysics and Astronomy in the University of Toronto.
+        Hi there! My name is Yilun Guan, a Cosmologist at the Dunlap Institute of Astrophysics and Astronomy in the University of Toronto. On a random day I&rsquo;m either thinking about cool science to do with the Cosmic Microwave Background measurements, or building software for the next-generation CMB telescope, the Simons Observatory, or having fun with emacs!
     </div>
     <footer class="entry-footer">
         <div class="social-icons">
@@ -134,9 +135,28 @@
     </path>
 </svg>
     </a>
+    <a href="mailto:yilun.guan@utoronto.ca" target="_blank" rel="noopener noreferrer me" title="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+    </a>
 </div>
 
     </footer>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Cosmic Birefringence: Status Overview
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Isotropic Methods Minami et al. 2019: describes a method to simutaneously determine birefringence and detector miscalibration using galactic foreground emission, assuming the galactic foreground has zero EB correlation. Sherwin and Namikawa 2021: miscalibration free measurements of isotropic birefringence using reionization bump. Namikawa 2021: use CMB mode coupling to constrain isotropic birefringence. Lee, Hotinli, and Kamionkowski 2022: use polarized SZ effect to probe cosmic birefringence. Diego-Palazuelos, Mart\’ınez-González, et al. 2022: validate method of (Minami et al....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-28 00:00:00 -0500 EST'>November 28, 2022</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Yilun Guan</footer>
+  <a class="entry-link" aria-label="post link to Cosmic Birefringence: Status Overview" href="https://guanyilun.github.io/posts/birefringence/"></a>
 </article>
     </main>
     
