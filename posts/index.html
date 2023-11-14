@@ -118,14 +118,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>jax
+    <h2>TIL
     </h2>
   </header>
   <div class="entry-content">
-    <p>Symbolic Tracing After spending several hours reading jax’s documentation. I have finally grasped the basic idea of it. I will try to summarize it in words. It is built upon an elegant concept which I call function reinterpretation. The idea is that, given an unknown implementation of a function, one can define a transformation that reinterprets the implementation of the function without knowing its details as long as the underlying function is composable of a well-defined set of primitive functions that we have provided....</p>
+    <p>A repository to keep track of random little things I learned each day.
+Observation matrix (2023/11/13) Observation matrix, \(M\), is defined as
+\begin{equation} m_{\rm out} = M m_{\rm in}. \end{equation}
+The sky signal observed by detectors, \(s\), is given by
+\begin{equation} s = Pm_{\rm in}, \end{equation}
+where \(P\) is the pointing matrix. It can be solved by
+\begin{equation} m = (P^{T}N^{-1}P)^{-1}P^TN^{-1}s \equiv Bs, \end{equation}
+where \(N\) is the noise covariance matrix....</p>
   </div>
-  <footer class="entry-footer"><span title='2023-01-25 12:27:50 -0500 EST'>January 25, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Yilun Guan</footer>
-  <a class="entry-link" aria-label="post link to jax" href="https://guanyilun.github.io/posts/jax/"></a>
+  <footer class="entry-footer"><span title='2023-11-13 22:56:45 -0500 EST'>November 13, 2023</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Yilun Guan</footer>
+  <a class="entry-link" aria-label="post link to TIL" href="https://guanyilun.github.io/posts/til/"></a>
 </article>
 
 <article class="post-entry"> 
