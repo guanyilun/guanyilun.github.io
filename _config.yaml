@@ -1,5 +1,0 @@
-defaults:
-  - scope:
-      path: "ox-hugo"
-    values:
-      image: true
