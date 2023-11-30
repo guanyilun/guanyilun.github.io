@@ -6,21 +6,15 @@
     <description>Recent content in Posts on Yilun Guan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Nov 2023 22:56:45 -0500</lastBuildDate><atom:link href="https://guanyilun.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Nov 2023 20:46:20 -0500</lastBuildDate><atom:link href="https://guanyilun.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>TIL</title>
+      <title>Today I Learned</title>
       <link>https://guanyilun.github.io/posts/til/</link>
-      <pubDate>Mon, 13 Nov 2023 22:56:45 -0500</pubDate>
+      <pubDate>Wed, 29 Nov 2023 20:46:20 -0500</pubDate>
       
       <guid>https://guanyilun.github.io/posts/til/</guid>
-      <description>A repository to keep track of random little things I learned each day.
-Observation matrix (2023/11/13) Observation matrix, \(M\), is defined as
-\begin{equation} m_{\rm out} = M m_{\rm in}. \end{equation}
-The sky signal observed by detectors, \(s\), is given by
-\begin{equation} s = Pm_{\rm in}, \end{equation}
-where \(P\) is the pointing matrix. It can be solved by
-\begin{equation} m = (P^{T}N^{-1}P)^{-1}P^TN^{-1}s \equiv Bs, \end{equation}
-where \(N\) is the noise covariance matrix.</description>
+      <description>A repository to keep track of random little things I learned or thought about each day.
+The Cosmic Dipole Problem (2023/11/29) CMB features a dipole anisotropy which is interpreted as our motion relative to the cosmic rest frame. If this interpretation is correct, one expects other probe of this relative motion to feature the same cosmic dipole. However measurements from radio galaxies and quasars have presented some discrepancies in the magnitude of the cosmic dipole (see, e.</description>
     </item>
     
     <item>
