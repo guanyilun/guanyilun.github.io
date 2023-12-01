@@ -6,11 +6,30 @@
     <description>Recent content in Home on Yilun Guan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Nov 2023 23:05:37 -0500</lastBuildDate><atom:link href="https://guanyilun.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Dec 2023 13:09:49 -0500</lastBuildDate><atom:link href="https://guanyilun.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advent Of Code</title>
+      <link>https://guanyilun.github.io/posts/advent_of_code/</link>
+      <pubDate>Fri, 01 Dec 2023 13:09:49 -0500</pubDate>
+      
+      <guid>https://guanyilun.github.io/posts/advent_of_code/</guid>
+      <description>Day 1 This question is about finding the first and last &amp;ldquo;digit&amp;rdquo; which could be written as number or word and computing the sum over all input lines. My attempt with julia:
+digits_lookup = Dict( &amp;#34;0&amp;#34; =&amp;gt; 0, &amp;#34;1&amp;#34; =&amp;gt; 1, &amp;#34;2&amp;#34; =&amp;gt; 2, &amp;#34;3&amp;#34; =&amp;gt; 3, &amp;#34;4&amp;#34; =&amp;gt; 4, &amp;#34;5&amp;#34; =&amp;gt; 5, &amp;#34;6&amp;#34; =&amp;gt; 6, &amp;#34;7&amp;#34; =&amp;gt; 7, &amp;#34;8&amp;#34; =&amp;gt; 8, &amp;#34;9&amp;#34; =&amp;gt; 9, &amp;#34;zero&amp;#34; =&amp;gt; 0, &amp;#34;one&amp;#34; =&amp;gt; 1, &amp;#34;two&amp;#34; =&amp;gt; 2, &amp;#34;three&amp;#34; =&amp;gt; 3, &amp;#34;four&amp;#34; =&amp;gt; 4, &amp;#34;five&amp;#34; =&amp;gt; 5, &amp;#34;six&amp;#34; =&amp;gt; 6, &amp;#34;seven&amp;#34; =&amp;gt; 7, &amp;#34;eight&amp;#34; =&amp;gt; 8, &amp;#34;nine&amp;#34; =&amp;gt; 9 ) function parse_number(line) out, digit = 0, 0 for i in eachindex(line) for (k, v) in digits_lookup if line[i:min(i+length(k)-1, length(line))] == k digit = v break end end out = out &amp;gt; 0 ?</description>
+    </item>
+    
+    <item>
+      <title>Shower Thoughts</title>
+      <link>https://guanyilun.github.io/posts/shower/</link>
+      <pubDate>Fri, 01 Dec 2023 13:09:39 -0500</pubDate>
+      
+      <guid>https://guanyilun.github.io/posts/shower/</guid>
+      <description>Gauge in Cosmology (2023/11/14) Why is there gauge freedom when analyzing cosmological perturbations? I think this lies in the fact that our background universe is homogeneous and isotropic, and density perturbations are perturbatively small. An observer in FLRW effectively experiences no gravity in the background level and thus has no preferred inertial frame background universe. The observer thus has the freedom to choose an inertial frame, as long as it doesn&amp;rsquo;t violate the perturbation limit, to describe his observable universe, and this introduces the gauge freedom.</description>
+    </item>
+    
     <item>
       <title>Today I Learned</title>
       <link>https://guanyilun.github.io/posts/til/</link>
-      <pubDate>Wed, 29 Nov 2023 23:05:37 -0500</pubDate>
+      <pubDate>Fri, 01 Dec 2023 13:09:21 -0500</pubDate>
       
       <guid>https://guanyilun.github.io/posts/til/</guid>
       <description>A repository to keep track of random little things I learned or thought about each day.
