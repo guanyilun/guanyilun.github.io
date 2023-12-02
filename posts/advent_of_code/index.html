@@ -42,7 +42,7 @@ digits_lookup = Dict( &#34;0&#34; =&gt; 0, &#34;1&#34; =&gt; 1, &#34;2&#34; =&gt
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://guanyilun.github.io/posts/advent_of_code/" /><meta property="article:section" content="posts" />
 
-<meta property="article:modified_time" content="2023-12-02T16:50:41-05:00" />
+<meta property="article:modified_time" content="2023-12-02T16:56:03-05:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Advent of Code"/>
@@ -80,11 +80,11 @@ digits_lookup = Dict( &#34;0&#34; =&gt; 0, &#34;1&#34; =&gt; 1, &#34;2&#34; =&gt
   "keywords": [
     
   ],
-  "articleBody": "Day 1 This question is about finding the first and last “digit” which could be written as number or word and computing the sum over all input lines. My attempt with julia:\ndigits_lookup = Dict( \"0\" =\u003e 0, \"1\" =\u003e 1, \"2\" =\u003e 2, \"3\" =\u003e 3, \"4\" =\u003e 4, \"5\" =\u003e 5, \"6\" =\u003e 6, \"7\" =\u003e 7, \"8\" =\u003e 8, \"9\" =\u003e 9, \"zero\" =\u003e 0, \"one\" =\u003e 1, \"two\" =\u003e 2, \"three\" =\u003e 3, \"four\" =\u003e 4, \"five\" =\u003e 5, \"six\" =\u003e 6, \"seven\" =\u003e 7, \"eight\" =\u003e 8, \"nine\" =\u003e 9 ) function parse_number(line) out, digit = 0, 0 for i in eachindex(line) for (k, v) in digits_lookup if line[i:min(i+length(k)-1, length(line))] == k digit = v break end end out = out \u003e 0 ? out : digit * 10 end out + digit end lines = readlines(\"input.txt\") parse_number.(lines) |\u003e sum Day 2 This question practices string splitting.\nPart 1:\nlines = readlines(\"input.txt\") function process_line(line) r, g, b = map(color -\u003e max(map(m -\u003e parse(Int, m.captures[1]), eachmatch(Regex(\"(\\\\d+) $(color)\"), line))...), [\"red\", \"green\", \"blue\"]) (r \u003c= 12 \u0026\u0026 g \u003c= 13 \u0026\u0026 b \u003c= 14) end map(line -\u003e is_allowed(line[2]) ? line[1] : 0, enumerate(lines)) |\u003e sum Part 2\nfunction process_line(line) r, g, b = map(color -\u003e max(map(m -\u003e parse(Int, m.captures[1]), eachmatch(Regex(\"(\\\\d+) $(color)\"), line))...), [\"red\", \"green\", \"blue\"]) r * g * b end map(process_line, lines) |\u003e sum ",
-  "wordCount" : "227",
+  "articleBody": "Day 1 This question is about finding the first and last “digit” which could be written as number or word and computing the sum over all input lines. My attempt with julia:\ndigits_lookup = Dict( \"0\" =\u003e 0, \"1\" =\u003e 1, \"2\" =\u003e 2, \"3\" =\u003e 3, \"4\" =\u003e 4, \"5\" =\u003e 5, \"6\" =\u003e 6, \"7\" =\u003e 7, \"8\" =\u003e 8, \"9\" =\u003e 9, \"zero\" =\u003e 0, \"one\" =\u003e 1, \"two\" =\u003e 2, \"three\" =\u003e 3, \"four\" =\u003e 4, \"five\" =\u003e 5, \"six\" =\u003e 6, \"seven\" =\u003e 7, \"eight\" =\u003e 8, \"nine\" =\u003e 9 ) function parse_number(line) out, digit = 0, 0 for i in eachindex(line) for (k, v) in digits_lookup if line[i:min(i+length(k)-1, length(line))] == k digit = v break end end out = out \u003e 0 ? out : digit * 10 end out + digit end lines = readlines(\"input.txt\") parse_number.(lines) |\u003e sum Day 2 This question practices string splitting. I made use of a trick that each occurance of “red”, “blue”, and “green” in a line corresponds to a different draw, so one can easily use one regular expression to find all matches and then find the upper limit to the number of balls.\nPart 1:\nlines = readlines(\"input.txt\") function process_line(line) r, g, b = map(color -\u003e max(map(m -\u003e parse(Int, m.captures[1]), eachmatch(Regex(\"(\\\\d+) $(color)\"), line))...), [\"red\", \"green\", \"blue\"]) (r \u003c= 12 \u0026\u0026 g \u003c= 13 \u0026\u0026 b \u003c= 14) end map(line -\u003e process_line(line[2]) ? line[1] : 0, enumerate(lines)) |\u003e sum Part 2\nfunction process_line(line) r, g, b = map(color -\u003e max(map(m -\u003e parse(Int, m.captures[1]), eachmatch(Regex(\"(\\\\d+) $(color)\"), line))...), [\"red\", \"green\", \"blue\"]) r * g * b end map(process_line, lines) |\u003e sum ",
+  "wordCount" : "272",
   "inLanguage": "en",
   "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "2023-12-02T16:50:41-05:00",
+  "dateModified": "2023-12-02T16:56:03-05:00",
   "author":[{
     "@type": "Person",
     "name": "Yilun Guan"
@@ -162,7 +162,7 @@ digits_lookup = Dict( &#34;0&#34; =&gt; 0, &#34;1&#34; =&gt; 1, &#34;2&#34; =&gt
     <h1 class="post-title">
       Advent of Code
     </h1>
-    <div class="post-meta"><span title='2023-12-02 16:50:41 -0500 EST'>December 2, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Yilun Guan
+    <div class="post-meta"><span title='2023-12-02 16:56:03 -0500 EST'>December 2, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Yilun Guan
 
 </div>
   </header> <div class="toc">
@@ -208,7 +208,10 @@ digits_lookup = Dict( &#34;0&#34; =&gt; 0, &#34;1&#34; =&gt; 1, &#34;2&#34; =&gt
 </span></span><span style="display:flex;"><span>lines <span style="color:#f92672">=</span> readlines(<span style="color:#e6db74">&#34;input.txt&#34;</span>)
 </span></span><span style="display:flex;"><span>parse_number<span style="color:#f92672">.</span>(lines) <span style="color:#f92672">|&gt;</span> sum
 </span></span></code></pre></div><h2 id="day-2">Day 2<a hidden class="anchor" aria-hidden="true" href="#day-2">#</a></h2>
-<p>This question practices string splitting.</p>
+<p>This question practices string splitting. I made use of a trick that
+each occurance of &ldquo;red&rdquo;, &ldquo;blue&rdquo;, and &ldquo;green&rdquo; in a line corresponds to
+a different draw, so one can easily use one regular expression to find
+all matches and then find the upper limit to the number of balls.</p>
 <p><strong>Part 1</strong>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>lines <span style="color:#f92672">=</span> readlines(<span style="color:#e6db74">&#34;input.txt&#34;</span>)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> process_line(line)
@@ -216,7 +219,7 @@ digits_lookup = Dict( &#34;0&#34; =&gt; 0, &#34;1&#34; =&gt; 1, &#34;2&#34; =&gt
 </span></span><span style="display:flex;"><span>                  [<span style="color:#e6db74">&#34;red&#34;</span>, <span style="color:#e6db74">&#34;green&#34;</span>, <span style="color:#e6db74">&#34;blue&#34;</span>])
 </span></span><span style="display:flex;"><span>    (r <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">&amp;&amp;</span> g <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">13</span> <span style="color:#f92672">&amp;&amp;</span> b <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">14</span>)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
-</span></span><span style="display:flex;"><span>map(line <span style="color:#f92672">-&gt;</span> is_allowed(line[<span style="color:#ae81ff">2</span>]) <span style="color:#f92672">?</span> line[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>, enumerate(lines)) <span style="color:#f92672">|&gt;</span> sum
+</span></span><span style="display:flex;"><span>map(line <span style="color:#f92672">-&gt;</span> process_line(line[<span style="color:#ae81ff">2</span>]) <span style="color:#f92672">?</span> line[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>, enumerate(lines)) <span style="color:#f92672">|&gt;</span> sum
 </span></span></code></pre></div><p><strong>Part 2</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> process_line(line)
 </span></span><span style="display:flex;"><span>    r, g, b <span style="color:#f92672">=</span> map(color <span style="color:#f92672">-&gt;</span> max(map(m <span style="color:#f92672">-&gt;</span> parse(<span style="color:#66d9ef">Int</span>, m<span style="color:#f92672">.</span>captures[<span style="color:#ae81ff">1</span>]), eachmatch(<span style="color:#66d9ef">Regex</span>(<span style="color:#e6db74">&#34;(</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">d+) </span><span style="color:#e6db74">$</span>(color)<span style="color:#e6db74">&#34;</span>), line))<span style="color:#f92672">...</span>),
