@@ -125,7 +125,7 @@
     <p>Day 1 This question is about finding the first and last “digit” which could be written as number or word and computing the sum over all input lines. My attempt with julia:
 digits_lookup = Dict( &#34;0&#34; =&gt; 0, &#34;1&#34; =&gt; 1, &#34;2&#34; =&gt; 2, &#34;3&#34; =&gt; 3, &#34;4&#34; =&gt; 4, &#34;5&#34; =&gt; 5, &#34;6&#34; =&gt; 6, &#34;7&#34; =&gt; 7, &#34;8&#34; =&gt; 8, &#34;9&#34; =&gt; 9, &#34;zero&#34; =&gt; 0, &#34;one&#34; =&gt; 1, &#34;two&#34; =&gt; 2, &#34;three&#34; =&gt; 3, &#34;four&#34; =&gt; 4, &#34;five&#34; =&gt; 5, &#34;six&#34; =&gt; 6, &#34;seven&#34; =&gt; 7, &#34;eight&#34; =&gt; 8, &#34;nine&#34; =&gt; 9 ) function parse_number(line) out, digit = 0, 0 for i in eachindex(line) for (k, v) in digits_lookup if line[i:min(i&#43;length(k)-1, length(line))] == k digit = v break end end out = out &gt; 0 ?...</p>
   </div>
-  <footer class="entry-footer"><span title='2023-12-02 16:56:03 -0500 EST'>December 2, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Yilun Guan</footer>
+  <footer class="entry-footer"><span title='2023-12-03 12:56:20 -0500 EST'>December 3, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Yilun Guan</footer>
   <a class="entry-link" aria-label="post link to Advent of Code" href="https://guanyilun.github.io/posts/advent_of_code/"></a>
 </article>
 
