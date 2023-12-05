@@ -6,11 +6,11 @@
     <description>Recent content in Posts on Yilun Guan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Dec 2023 21:17:16 -0500</lastBuildDate><atom:link href="https://guanyilun.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Dec 2023 16:52:36 -0500</lastBuildDate><atom:link href="https://guanyilun.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Advent of Code</title>
       <link>https://guanyilun.github.io/posts/advent_of_code/</link>
-      <pubDate>Mon, 04 Dec 2023 21:17:16 -0500</pubDate>
+      <pubDate>Tue, 05 Dec 2023 16:52:36 -0500</pubDate>
       
       <guid>https://guanyilun.github.io/posts/advent_of_code/</guid>
       <description>Day 1 This question is about finding the first and last &amp;ldquo;digit&amp;rdquo; which could be written as number or word and computing the sum over all input lines. My attempt with julia:
