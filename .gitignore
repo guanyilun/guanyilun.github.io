@@ -8,3 +8,4 @@ node_modules
 /build
 /.svelte-kit
 /package
+experiments
