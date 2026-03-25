@@ -3,7 +3,7 @@
 
 	let { href, children } = $props();
 
-	let isCurrentPage = $derived($currentPage.startsWith(href));
+	let isCurrentPage = $derived($currentPage === href);
 
 	const maybeCloseMenu = () => {
 		if (href != $currentPage) {

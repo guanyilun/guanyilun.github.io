@@ -23,10 +23,10 @@ export const navItems = [
 	// 	title: 'Research',
 	// 	route: '/#research'
 	// },
-	// {
-	// 	title: 'Blog',
-	// 	route: '/blog'
-	// },
+	{
+		title: 'Blog',
+		route: '/blog'
+	},
 	{
 		title: 'CV',
 		route: '/CV.pdf'

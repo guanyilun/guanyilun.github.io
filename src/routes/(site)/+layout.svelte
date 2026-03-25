@@ -1,7 +1,5 @@
 <!-- This is the global layout file; it "wraps" every page on the site. (Or more accurately: is the parent component to every page component on the site.) -->
 <script>
-	import { run } from 'svelte/legacy';
-
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import { currentPage, isMenuOpen } from '$lib/assets/js/store.js';
@@ -19,7 +17,7 @@
 	 * Updates the global store with the current path. (Used for highlighting
 	 * the current page in the nav, but could be useful for other purposes.)
 	 **/
-	run(() => {
+	$effect(() => {
 		currentPage.set(data.path);
 	});
 
