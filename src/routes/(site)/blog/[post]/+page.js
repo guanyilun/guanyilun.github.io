@@ -1,14 +1,15 @@
 import { error } from '@sveltejs/kit'
+import { getPost } from '$lib/posts'
 
 export const load = async ({ params }) => {
-	try {	
-		const post = await import(`$lib/posts/${params.post}.md`)
+	const post = await getPost(params.post)
 
-		return {
-			PostContent: post.default,
-			meta: { ...post.metadata, slug: params.post } 
-		}
-	} catch(err) {
-		error(404, err);
+	if (!post) {
+		error(404, 'Post not found')
+	}
+
+	return {
+		PostContent: post.content,
+		meta: { ...post.metadata, slug: post.slug }
 	}
 }

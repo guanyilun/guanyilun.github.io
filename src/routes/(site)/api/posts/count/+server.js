@@ -1,9 +1,8 @@
 import { json } from '@sveltejs/kit'
+import { getPostCount } from '$lib/posts'
 
 export const prerender = 'auto'
 
 export const GET = () => {
-  const posts = import.meta.glob(`$lib/posts/*.md`)
-
-  return json(Object.keys(posts).length)
+  return json(getPostCount())
 }

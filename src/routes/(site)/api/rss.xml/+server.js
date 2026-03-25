@@ -1,19 +1,11 @@
 // IMPORTANT: update all these property values in src/lib/config.js
 import { siteTitle, siteDescription, siteURL, siteLink } from '$lib/config'
+import { getAllPosts } from '$lib/posts'
 
 export const prerender = true
 
-export const GET = async () => {	
-	const data = await Promise.all(
-		Object.entries(import.meta.glob('$lib/posts/*.md')).map(async ([path, page]) => {
-			const { metadata } = await page()
-			const slug = path.split('/').pop().split('.').shift()
-			return { ...metadata, slug }
-		})
-	)
-	.then(posts => {
-		return posts.sort((a, b) => new Date(b.date) - new Date(a.date))
-	})
+export const GET = async () => {
+	const data = await getAllPosts()
 
 	const body = render(data)
 	const headers = {

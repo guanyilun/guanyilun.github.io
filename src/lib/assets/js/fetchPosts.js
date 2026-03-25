@@ -1,16 +1,8 @@
 import { postsPerPage } from '$lib/config'
+import { getAllPosts } from '$lib/posts'
 
 const fetchPosts = async ({ offset = 0, limit = postsPerPage, category = '' } = {}) => {
-
-	const posts = await Promise.all(
-		Object.entries(import.meta.glob('/src/lib/posts/*.md')).map(async ([path, resolver]) => {
-			const { metadata } = await resolver()
-			const slug = path.split('/').pop().slice(0, -3)
-			return { ...metadata, slug }
-		})
-	)
-
-	let sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date))
+	let sortedPosts = await getAllPosts()
 	
 	if (category) {
     sortedPosts = sortedPosts.filter(post => post.categories.includes(category))
